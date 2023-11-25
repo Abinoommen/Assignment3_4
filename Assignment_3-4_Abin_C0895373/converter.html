@@ -1,0 +1,78 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Link to external CSS file -->
+    <link rel="stylesheet" type="text/css" href="converter.css" />
+    <!-- Title of the page -->
+    <title>Converter</title>
+</head>
+<body>
+    <!-- Main container for the converter -->
+    <div class="converter">
+        <!-- Header section with title and description -->
+        <div class="header">
+            <h1>US Dollar to Canadian Dollar.</h1>
+            <h3>Convert USD to CAD at the real exchange rate</h3>
+        </div>
+        <!-- Input section -->
+        <div class="inputs">
+            <!-- Input fields for amount and converted result -->
+            <div class="inputsecond">
+                <!-- Placeholders for labels -->
+                <div class="placeholders">
+                    <p>Amount</p>
+                    <p>Converted to</p>
+                </div>
+                <!--Container for the USD input -->
+                <div class="inptfield">
+                    <!-- Input field for USD amount and USD flag OR CAD amount and CAD flag -->
+                    <div class="insideinpt">
+                        <input type="number" class="inpt" id="usdAmount" step="0.01"/>
+                        <!-- Container for currency info (flag, down arrow) -->
+                        <div class="dropdown">
+                            <div class="rectangle" id="rectangle1" onclick="toggle()">
+                                <img src="united-states.png"/>
+                                <p>USD</p>
+                                <img src="down-arrow.png"/>
+                            </div>
+                            <div class="rectangle cad" id="rr" onclick="swap()">
+                                <img src="canada.png"/>
+                                <p>CAD</p>
+                                <img src="down-arrow.png"/>
+                            </div>  
+                        </div>
+                        
+                    </div>
+                    <!-- Shuffle icon for swapping currencies -->
+                    <img src="shuffle.png" class="shuffle" onclick="swap()"/>
+                    <!-- output field for the result-->
+                    <div class="insideinpt">
+                        <input type="number" class="inpt" id="result" disabled/>
+                        <!-- Container for currency info (flag,down arrow) -->
+                        <div class="dropdown">
+                            <div class="rectangle" id="rectangle2">
+                                <img src="canada.png"/>
+                                <p>CAD</p>
+                                <img src="down-arrow.png"/>
+                            </div>
+                            <div class="rectangle usd">
+                                <img src="united-states.png"/>
+                                <p>USD</p>
+                                <img src="down-arrow.png"/>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+            <!-- Convert button -->
+            <div class="button">
+                <button class="btn" id="btn" >Convert</button>
+            </div>
+        </div>
+    </div>
+    <!-- Link to external JavaScript file -->
+    <script src="converter.js"></script>
+</body>
+</html>
